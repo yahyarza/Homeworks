@@ -1,0 +1,3 @@
+class Week03Point { private final int x,y; Week03Point(int x,int y){this.x=x;this.y=y;} public String toString(){return new StringBuilder().append("(").append(x).append(", ").append(y).append(")").toString();} }
+class Week03Segment { private final Week03Point start,end; Week03Segment(int x1,int y1,int x2,int y2){start=new Week03Point(x1,y1);end=new Week03Point(x2,y2);} public String toString(){return new StringBuilder().append("[").append(start).append(", ").append(end).append("]").toString();} }
+public class Task18ToStringDemo { public static void main(String[] args){System.out.println(new Week03Point(3,5));System.out.println(new Week03Segment(1,2,3,4));System.out.println("StringBuilder avoids creating many temporary String objects when building a result.");} }

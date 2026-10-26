@@ -1,0 +1,3 @@
+public class Task12SquareInheritance { static class Rectangle { protected int width,height; Rectangle(int w,int h){width=w;height=h;} @Override public boolean equals(Object obj){if(this==obj)return true;if(!(obj instanceof Rectangle))return false;Rectangle r=(Rectangle)obj;return width==r.width&&height==r.height;} @Override public int hashCode(){return 31*width+height;} }
+    static class Square extends Rectangle { Square(int side){super(side,side);} }
+    public static void main(String[] args){Object o1=new Rectangle(5,10),o2=new Rectangle(15,15),o3=new Square(15);System.out.println("Objects are identical: "+o1.equals(o2));System.out.println("Objects are identical: "+o1.equals(o3));System.out.println("Objects are identical: "+o2.equals(o3));} }

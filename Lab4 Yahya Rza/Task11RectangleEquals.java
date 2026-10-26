@@ -1,0 +1,2 @@
+public class Task11RectangleEquals { static class Rectangle { int width,height; Rectangle(int w,int h){width=w;height=h;} @Override public boolean equals(Object obj){if(this==obj)return true;if(!(obj instanceof Rectangle))return false;Rectangle r=(Rectangle)obj;return width==r.width&&height==r.height;} @Override public int hashCode(){return 31*width+height;} }
+    public static void main(String[] args){Rectangle r1=new Rectangle(5,10),r2=new Rectangle(15,10),r3=new Rectangle(5,10);System.out.println(r1.equals(r2));System.out.println(r1.equals(r3));} }
